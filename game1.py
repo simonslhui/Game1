@@ -177,7 +177,7 @@ def menu(exits):
 
     
     # COMPLETE THIS PART:
-        
+       
     # Display menu
     print_menu(exits)
     # Read player's input
@@ -187,9 +187,8 @@ def menu(exits):
     # Check if the input makes sense (is valid exit)
     ive = is_valid_exit(exits, user_input)
     if ive == True:
-        print(normalised_user_input)
         # If so, return the player's choice
-
+        print(normalised_user_input)
 
 
 
