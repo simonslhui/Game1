@@ -64,11 +64,7 @@ def normalise_input(user_input):
 
     
 def display_room(room):
-    print()
-    print(room["name"].upper())
-    print()
-    print(room["description"])
-    print()
+    
 
     """This function takes a room as an input and nicely displays its name
     and description. The room argument is a dictionary with entries "name",
@@ -88,6 +84,12 @@ def display_room(room):
 
     Note: <BLANKLINE> here means that doctest should expect a blank line.
     """
+
+    print()
+    print(room["name"].upper())
+    print()
+    print(room["description"])
+    print()
     pass
 
     
@@ -110,7 +112,7 @@ def exit_leads_to(exits, direction):
     
 
 def print_menu_line(direction, leads_to):
-    print("Go", direction.upper(), "to",  leads_to)
+    
     """This function prints a line of a menu of exits. It takes two strings: a
     direction (the name of an exit) and the name of the room into which it
     leads (leads_to), and should print a menu line in the following format:
@@ -123,6 +125,10 @@ def print_menu_line(direction, leads_to):
     >>> print_menu_line("south", "MJ and Simon's room")
     Go SOUTH to MJ and Simon's room.
     """
+    s=""
+    seq = (leads_to, ".")
+    print("Go", direction.upper(), "to", s.join(seq))
+
 
 
 def print_menu(exits):
